@@ -38,7 +38,7 @@ jobs:
         git remote set-url origin https://${{secrets.PUBLISH_GITHUB_TOKEN}}@github.com/${{github.repository}}
         git add package.json
         git commit -m "chore(release): update package version to ${{ steps.update_version.outputs.new_version }}"
-        git push origin HEAD:master
+        git push origin HEAD:main
 
     - name: Trigger Workflow B
       run: |
@@ -46,4 +46,4 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           -H "Authorization: token ${{ secrets.PUBLISH_GITHUB_TOKEN }}" \
           https://api.github.com/repos/slxca/mockr.js/actions/workflows/npm-publish.yml/dispatches \
-          -d '{"ref":"master"}'
+          -d '{"ref":"main"}'
