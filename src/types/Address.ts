@@ -669,17 +669,17 @@ export default function generateAddress(type: 'full' | 'street' | 'city' | 'stat
   const address = addresses[Math.floor(Math.random() * addresses.length)]
 
     if (type === 'full') {
-        return `${address.streetAddress}, ${address.zipCode} ${address.city}, ${address.state}, ${address.country}`
+        return `${address?.streetAddress}, ${address?.zipCode} ${address?.city}, ${address?.state}, ${address?.country}`
     } else if (type === 'street') {
-        return address.streetAddress
+        return address?.streetAddress
     } else if (type === 'city') {
-        return address.city
+        return address?.city
     } else if (type === 'state') {
-        return address.state
+        return address?.state
     } else if (type === 'zip') {
-        return address.zipCode
+        return address?.zipCode
     } else if (type === 'country') {
-        return address.country
+        return address?.country
     } else if (type === 'json') {
         return address
     }
