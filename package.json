@@ -1,7 +1,7 @@
 {
     "name": "mockr.js",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "mockr.js is a lightweight npm package that simplifies the generation of realistic mock data for various use cases in development and testing.",
     "repository": {
         "url": "git+https://github.com/slxca/mockr.js.git"
