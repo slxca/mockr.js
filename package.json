@@ -1,0 +1,32 @@
+{
+    "name": "mockr.js",
+    "license": "MIT",
+    "version": "0.0.1",
+    "description": "mockr.js is a lightweight npm package that simplifies the generation of realistic mock data for various use cases in development and testing.",
+    "repository": {
+        "url": "git+https://github.com/slxca/mockr.js.git"
+    },
+    "author": "slxca <contact@s-luca.com> (https://s-luca.com)",
+    "funding": "https://github.com/sponsors/slxca",
+    "files": [
+        "dist"
+    ],
+    "bugs": {
+        "url": "https://github.com/slxca/mockr.js/issues",
+        "email": "bugs@s-luca.com"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup src/** --format cjs,esm --dts",
+        "lint": "tsc"
+    },
+    "devDependencies": {
+        "tsup": "^8.1.0",
+        "typescript": "^5.5.2"
+    }
+}
